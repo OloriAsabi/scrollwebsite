@@ -1,0 +1,251 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+nav{
+    background-color: white;
+    padding: 1rem;
+}
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle{
+    font-size: 1.5rem;
+    color: hsl(209, 61%, 16%);
+    border: transparent;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.nav-toggle:hover{
+    color:  hsla(182, 63%, 54%);
+}
+/* fixed nav*/
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+}
+
+.fixed-nav .links a {
+  color:  hsl(209, 61%, 16%);
+}
+.fixed-nav .links a:hover {
+  color: hsla(182, 63%, 54%);
+}
+ /*.fixed-nav .links-container {
+  height: auto !important;
+} */
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: .25rem;
+  display: inline-block;
+  transition: all .3s linear;
+  font-size: 0.875rem;
+  border: 2px solid white;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.btn:hover {
+  color: black;
+  background: white;
+
+
+}
+
+
+
+.logo{
+    height: 4.5rem;
+}
+.links-container{
+    height: 0;
+    overflow: hidden;
+    transition: all .3s linear;
+}
+
+.show-links{
+    height: 200px;
+}
+.links{
+     list-style-type: none;
+}
+
+.links a{
+    background: white;
+    color:  hsl(210, 22%, 49%);
+    display: block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 0.25rem;
+    font-weight: bold;
+    padding: 0.75rem 0;
+    transition: all .3s linear;
+}
+
+.links a:hover{
+    color: black;
+    padding-left: 1.2rem;
+}
+
+
+
+@media screen and (min-width: 800px) {
+    nav {
+      background: transparent;
+    }
+    .nav-center {
+      width: 90vw;
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .fixed-nav{
+      width: 100%;
+    }
+
+    .links-container {
+      height: auto !important;
+    }
+    .links {
+      display: flex;
+    }
+    .links a {
+      background: transparent;
+      color: white;
+      font-size: 1.1rem;
+      text-transform: capitalize;
+      letter-spacing: 0.25rem;
+      display: block;
+      transition: all .3s linear;
+      margin: 0 1rem;
+      font-weight: bold;
+      padding: 0;
+    }
+    .links a:hover {
+      color: white;
+    }
+  }
+
+  header{
+      min-height: 100vh;
+      background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+      url(download.jpg) center/cover no-repeat;
+  }
+
+  .banner{
+      min-height: 100vh;
+      place-items: center;
+      display: grid;
+      text-align: center;
+  }
+
+  .container h1{
+      color: white;
+      text-transform: uppercase;
+  }
+  .container p{
+      max-width: 25rem;
+      color: white;
+      margin: 0 auto;
+      margin-bottom: 1.25rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container p {
+      max-width: 40rem;
+    }
+  }
+  .title h2{
+      text-align: center;
+      text-transform: uppercase;
+  }
+
+  .title span{
+      color: hsla(182, 63%, 54%);
+  }
+
+
+  #about,#services,
+  #tours{
+      height: 80vh;
+  }
+
+  #services{
+      background: white;
+  }
+
+  footer{
+    background-color: gray;
+    padding: 5rem 1rem; 
+  }
+
+  footer p{
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 0.25rem;
+    margin-bottom: 0;
+  }
+
+  .top-link{
+    font-size: 1rem;
+    position: fixed;
+    background-color: transparent;
+    bottom: 3rem;
+    right: 3rem;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius:  5px; ;
+    animation: bounce 2s ease-in-out infinite;
+    visibility: hidden;
+    z-index: -100;
+  }
+
+  .show-link {
+    visibility: visible;
+    z-index: 100;
+  }
+
+  @keyframes bounce{
+    0% {
+      transform: scale(0.5);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.5);
+    }
+  }
